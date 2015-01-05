@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+<title>My Blog</title>
+	</head>
+<body>
+
+<div id = "header">
+<div id = "navigationBar">
+<ul>
+  <li><a href = "../index.html">Home</a></li>
+  <li><a href = "../projects.html">Projects</a></li>
+  <li><a href = "../resources.html">Resources</a></li>
+</ul>
+</div>
+<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
+<div id="name">Danny's DBC Diary</div>
+</div>
+
+
+<div id = "content">
+<h1>Phase 0, Week 2</h1>
+<h2>Fun with CSS</h2>
+<h4>January 4, 2015</h4>
+
+<section>
+This "week" at DBC has been a rather long one!  With the holiday break, it's actually been three weeks since my last post, sheesh.  This part of Unit 1 was focused on CSS and HTML.  HTML stands for HyperText Markup Language, and is the language the structure of a website is written in.  CSS, or Cascading Style Sheets, is another langauge used in conjunction with HTML to make your websites beautiful, and not something off circa 1995 Geocities.
+
+In HTML, sections of the website are divided into different tags, or selectors.  For example, one selector could be the navigation bar for the site.  In CSS, you can selectively target any selector, and apply whatever style (font size, color, emphasis, background color, you name it!) you want to it.  When you've got several sections of a site you'd like to have the same style, you can use what is called a "class" to apply one style to all elements of that class.  For example:
+
+We can define a class for list items like so:
+	&lt;li class="list"&gt; &lt;/li&gt;
+we can then apply the class to any other items we want to have the same kind of style the same way.  In CSS you would then use:
+	.list {
+	-whatever CSS you want
+	}
+
+That's great if we have a bunch of things we want to look the same, but what if we've got distinct elements we want to look different?  This is where IDs come into play.  IDs work exactly like a class except you replace the word class with ID:
+	&lt;li id="first"&gt; &lt;/li&gt;
+This defines the ID "first."  In CSS, we would style it like so:
+	#first {
+	-CSS here
+	}
+Get all that?  The take home message is that classes are for a style you reuse often, and IDs are for individual blocks you want to style separately from the main site.
+
+</section>
+</div>
+
+<div id = "footer"></div>  
+  
+</body>
+
+
+</html>
