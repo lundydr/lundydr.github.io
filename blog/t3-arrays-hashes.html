@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+<title>My Blog</title>
+	</head>
+<body>
+
+<div id = "header">
+<div id = "navigationBar">
+<ul>
+  <li><a href = "../index.html">Home</a></li>
+  <li><a href = "index.html">Blog</a></li>
+  <li><a href = "../projects.html">Projects</a></li>
+  <li><a href = "../resources.html">Resources</a></li>
+</ul>
+</div>
+<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
+<div id="name">Danny's DBC Diary</div>
+</div>
+
+
+<div id = "content">
+<h1>Phase 0, Week 3</h1>
+<h2>Ruby: Arrays vs Hashes</h2>
+<h4>January 11, 2015</h4>
+
+<section>
+Hello again reader(s)!  Today marks the final day of Phase 0, Week 3, which is also the end of the first Unit!  33% to Phase 1, Hooray!  This week, the cirriculum was focused on the programming language Ruby.  Ruby is a newer language popular among today's web developers.  Like most modern languages, Ruby allows programmers to store collections of data in a single place.  There are two types of "collections" Ruby allows you to use, <i>Arrays</i> and <i>Hashes</i>.  The main difference between the two is the method of indexing the object.  Indexing is how you keep track of the individual elements in the array or hash.  Arrays can only use integers and indeces.  In the following example, we see an array defined and how to access its contents.
+<pre class = "codeblock">
+	array = [a, b ,c]
+	array[1] = b
+</pre>
+Woah, wait.  The first element is b?  That's not what you'd expect with normal indexing.  However, most programming languages begin at 0.  Therefore, the 0th element is a.  The elements a, b, and c could be any object type: string, integer, or float.
+
+Hashes, however, can accept any object type as an index.  This means we could use a string, an integer, a float, or whatever we wanted.  Because anthing can be used, the method for creating a hash is a bit more complicated:
+<pre class="codeblock">
+	hash = {
+	index => element
+}	
+</pre>
+As you can see, each element of the hash must be assigned its own index, or key.  You can use the same key for multiple elements if you desire.  The elements can again be any object type.
+
+Well that's great, but they seem pretty similar.  Why would I want to ever use that clunky hash instead of an array?  Let's say we wanted to assign different animals to their corresponding kingdom.  Let's say we have about 100 animals, and we want to sort them into their six kingdoms.  You'd need six separate arrays to do this, one for each kingdom, because we can only keep track of our elements with integers.  (You could also use an array of arrays with the second element in the inner array for the kingdom, and the index of the outer array corresponding to the animal, but you would end up repeating yourself A LOT). Using a hash, however would allow us to store an extra dimension of information like this:
+<pre class="codeblock">
+	animals = {
+	"bacteria" => "E. coli"
+	"protozoa" => "plankton"
+	"animal" => "dog"
+	"plant" => "tomato"
+	"animal" => "cat"
+	etc.
+}
+</pre>
+That's a lot more efficient code, isn't it?  That's exactly what we want to do as developers, the absolute minimum amount of code to get the job done right.  I like to call it being proactively lazy.
+</section>
+</div>
+
+<div id = "footer"></div>  
+  
+</body>
+
+
+</html>
