@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+	<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+	<title>My Blog</title>
+</head>
+<body>
+
+<div id = "header">
+<div id = "navigationBar">
+<ul>
+  <li><a href = "../index.html">Home</a></li>
+  <li><a href = "index.html">Blog</a></li>
+  <li><a href = "../projects.html">Projects</a></li>
+  <li><a href = "../resources.html">Resources</a></li>
+</ul>
+</div>
+<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
+<div id="name">Danny's DBC Diary</div>
+</div>
+
+
+<div id = "content">
+<h1>Phase 0, Week 4</h1>
+<h2>Enumerable Methods in Ruby: #map</h2>
+<h4>January 18, 2015</h4>
+
+<section>
+Well, it's Sunday evening again, and you know what that means don't you?  That's right.  Blog time.  This week was the first week of Unit 2, and was mostly just more advanced Ruby programming.  <a href = "t3-arrays-hashes.html">Last week</a>, I told you about two of the classes, <i>Arrays</i> and <i>Hashes</i>.  Fortunately, these are only two of the many classes Ruby has built in, not to mention the fact that you can define your own classes if you require.  In Ruby, every class definition includes several built in methods you can call on objects of that class.  Now imagine you had a simple searching method that you wanted to apply to several different classes.  One way to integrate it would be to add it separately to each class's definition, but that's pretty much the definition of repeating coding, so that's not how we want to do it.  Luckily, Ruby has a collection of "Enumerable methods" that can be applied to many different classes simply by telling the class to include the Enumerables.  So we can add new methods to the Enumerables instead.  
+
+Alright, hopefully you got all that.  The Enumerables module is strictly for collection classes like Arrays, and includes several ways to search the collection and sort it.  One of the most useful methods is #map.  There are a couple ways to imagine how #map works, but I like to think of it as a set of directions to change the original object.  If we were using #map on an Array, the syntax would be like this:
+<pre class = "codeblock">
+	>	array = [1,2,3,4,5,6]
+	>	array.map { |element| block of code}
+</pre>
+|element| is the variable placeholder for the element of array, and the block of code is applied to each element in turn.  This then returns a new array where each element is the output of the block of code.  So let's say we wanted to square all the numbers in our array:
+<pre class = "codeblock">
+	>	array = [1,2,3,4,5,6]
+	>	array.map { |element| element**2}
+	=>	[1,4,9,16,25,36]
+</pre>
+Or add 17 to them:
+<pre class = "codeblock">
+	>	array = [1,2,3,4,5,6]
+	>	array.map { |element| element + 17}
+	=>	[18,19,20,21,22,23]
+</pre>
+
+As you can see, #map is pretty useful if you have a something you need to do to each element in an array or hash.  There is another method, #collect, which works identically to map.  These methods are both <i>non-destructive</i>, which means they do not change the original object.  There is a destructive version of #map, #map!, which has the same syntax, but changes the original object passed. 
+</section>
+
+</div>
+
+<div id = "footer"></div>  
+  
+</body>
+
+
+</html>
