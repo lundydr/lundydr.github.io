@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+	<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+	<title>My Blog</title>
+</head>
+<body>
+
+<div id = "header">
+<div id = "navigationBar">
+<ul>
+  <li><a href = "../index.html">Home</a></li>
+  <li><a href = "index.html">Blog</a></li>
+  <li><a href = "../projects.html">Projects</a></li>
+  <li><a href = "../resources.html">Resources</a></li>
+</ul>
+</div>
+<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
+<div id="name">Danny's DBC Diary</div>
+</div>
+
+
+<div id = "content">
+<h1>Phase 0, Week 6</h1>
+<h2>Object-Oriented vs Functional Programming</h2>
+<h4>February 1, 2015</h4>
+
+<section>
+Hello again, reader(s)!  Today marks the end of Unit 2 of Phase 0.  This week the cirriculum was again focused on Ruby.  <a href = "t5-ruby-classes.html">Last week</a>, I mentioned that Ruby was known as an "Object-Oriented" programming language and briefly discussed what that meant.  This week, I am going to go more in depth on Object-Oriented Programming (OOP), and compare it with what some consider its opposite, Functional Programming (FP).
+
+In OOP, the focus of the code is on creating new objects and the methods they respond to.  We send an object a "message" telling it to perform a certain method and give us the result. An object's data is coupled tightly to the object, and therefore, its associated methods.  Typically, the data structure is hidden to the end-user behind the methods used by the object to interface with that data.  In Object-Oriented code, it is easy to implement changes to methods and data relationships without breaking unintended code, since the methods are independent of each other.  However, it is a bit more difficult to implement new functionality to OO code than it is with FP code.
+
+In FP, the focus is on writing functions to perform operations on the data.  New operations are easy to implement, as they are just written as needed.  The function is only loosely coupled to the data it performs an operation on, so changes to the data structure are likely to break many functions accessing the structure.  
+
+Essentially, the difference in the two is their strengths and weaknesses.  Correct implementation of either style of code requires understanding the types of operations being performed, as well as those that may need to be performed in the future.  Most business database code is FP, writing different functions to change the way something is displayed or change values in a database.  OOP is much better when you anticipate having to change individual steps of your algorithm and want to be more flexible with the data structure.
+</section>
+
+</div>
+
+<div id = "footer"></div>  
+  
+</body>
+
+
+</html>
