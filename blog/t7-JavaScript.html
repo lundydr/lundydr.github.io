@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html> 
+
+<head>
+	<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+	<title>My Blog</title>
+</head>
+<body>
+
+<div id = "header">
+<div id = "navigationBar">
+<ul>
+  <li><a href = "../index.html">Home</a></li>
+  <li><a href = "index.html">Blog</a></li>
+  <li><a href = "../projects.html">Projects</a></li>
+  <li><a href = "../resources.html">Resources</a></li>
+</ul>
+</div>
+<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
+<div id="name">Danny's DBC Diary</div>
+</div>
+
+
+<div id = "content">
+<h1>Phase 0, Week 4</h1>
+<h2>Looping: JavaScript vs Ruby</h2>
+<h4>February 8, 2015</h4>
+
+<section>
+One of the most basic concepts to programming is that of the <i>loop</i>.  A loop is simply a block of code that you want to execute over and over.  Every programming language implements loops in some way, the key difference is how.  Ruby has approximately twenty billion looping methods (+/- a few billion, but really, there are a ton) like each, each_index, times, while etc.  JavaScript, on the other hand, has exactly two: for and while.  When you think about the purpose of looping in general, the significance of two is clear.  So what is the purpose of a loop?  Well, we either want to do something a certain number of times, or do something until a condition is satisfied.  In other words, two basic functions looping needs to satisfy, thus two types of loops.
+
+I will go over <b>while</b> loops first since the syntax is closer.  Let's say we want to print out a certain number of * characters, and let's call that number 5.  Here's how we'd do it in Ruby:
+<pre class = "codeblock">
+	> num = 0
+	> while num < 5 do
+	> 	puts "*"
+	>   num += 1
+	> end
+</pre>
+Pretty simple.  We define a counter, num, and initialze it to zero.  Inside the while block, num gets 1 added to it with each pass, so after 5 passes, the while condition is false and the loop fails to execute.  In JavaScript, the same loop would look like this:
+<pre class = "codeblock">
+	> var num = 0;
+	> while (num < 5) {
+	> 	console.log("*");
+	>	num ++;
+	> }
+</pre>
+The structure is exactly the same, only the syntax is different.  In JavaScript's case, the block needs to be encapsulated by curly brackets ({}), and each statement must end with a semicolon (;).  console.log() functions the same as puts.  So while loops are pretty much the same, but what about the others?
+
+In JavaScript, the other kind of loop is the <b>for</b> loop.  Pretty much every enumerable method (each, each_index, times) that loops a certain number of times or through every element in an array or hash could be alternatively written as a for style loop.  The primary difference is we know ahead of time how many iterations we need to do.  So let's say we've got an array of numbers, and we went to go through each number in the array and print it out in turn.  Pretty easy, right?  Here's the code in Ruby:
+<pre class = "codeblock">
+	> array = [1,2,3,4,5,6,7,8,9,10]
+	> array.each { |element|
+	>	 puts element
+	> }
+</pre>
+We can use the included array method Array#each to automatically go through each item in the array.  The value between the "| |"" statemeant means "value" is the name of our looping variable, the Array#each method defines that as the element of the array each is operating on.  If we want to loop through the array using the index as a looping variable rather than the element, we would need to use Array#each_index rather than Array#each.  In Ruby, you need to know which method is appropriate to use for your loop's functionality, and sometimes there is more than one answer.  In JavaScript, rather than have a different method for each way of looping, there is just one syntax used, and the programmer must be creative to define the loop's behavior.  Our example loop:
+<pre class = "codeblock">
+	> var array = [1,2,3,4,5,6,7,8,9,10]
+	> for (var n = 0; n < (array.length - 1); n++) {
+	> 	console.log(array[n]);
+	> }
+</pre>
+In the for declaration, there are 3 statements: one defining a new variable, n, and setting it to 0; one conditional statement; and one statement that says how to iterate.  In this case, we are using n to count, and are adding 1 (n++) every loop.  When n < (array.lenght - 1) (which in this case is 9), the loop ends.  In JavaScript, we need to use the length property of the array to get how many elements there are, and subtract 1 from this to get the correct number of indeces to iterate over.  For this reason, it is not as pretty to read as ruby, but still offers the same flexibility.
+</section>
+
+</div>
+
+<div id = "footer"></div>  
+  
+</body>
+
+
+</html>
