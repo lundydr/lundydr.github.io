@@ -1,82 +1,64 @@
 html {
         background-color: #CFD4D3;
 }
-#header {
-	top: 5px;
-    height: 216px;
-    display: block;
+header {
     background-color: #636E63;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-li {
-    display: inline-block;
-    padding: 5px;
-    margin: 2px;
-    border: 1px solid black;
+nav {
+    float: left;
+    width: 15%;
+    padding-right: 10px;
+}
+nav li {
+    border: 2px solid black;
     border-radius: 4px;
+    padding: 8px;
     background-color: #0A4D14;
     color: white;
     font-family: Georgia;
 }
-li a {
+nav li a {
     color: white;
     text-decoration: none;
 }
-#footer {
+footer {
 	clear:both;
 	bottom:5px;
-    height: 108px;
+    height: 50px;
     background-color: #636E63;    
     font-family: Georgia;
     display: block;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-#navigationBar {
-    margin-left: 35%;
-    position: absolute;
-    margin-top: -10px;
-    font-family: Georgia;
-    font-size: 1em;
-}
-#pic {
-    margin-left: 8px;
-    height:200px;
+img.align-left {
     width: 200px;
-    margin-top: 8px;
-    float:left;
+    height: 200px;
+    margin-right: 10px;
+    float: left;
 }
-img {
-    width: 100%;
-    height: auto;
-}
-#name {
-    font-family: Forte, cursive;
-    font-weight: bold;
-    font-size: 4em;
-    margin-top: 100px;
-    margin-right: 200px;
-    float:right;
-}
-#aboutMe {
-	white-space: pre-line;
+#bio {
 	float: left;
-	width:48%;
-	border: 2px solid black;
-	padding: 1%;
+	width: 60%;
 }
-#Contact {
-	white-space: pre-line;
-	float:right;
-	width:47%;
-	padding: 1%;
-	border: 2px solid black;
+aside{
+    float: right;
+    width: 22%;
 }
 .codeblock {
     font-family: Monospace;
 }
-#content {
-    border: 2px solid black;
-    padding: 1%;
+p {
+    font-size: 1.0em;
+}
+article{
+    float: left;
+    width: 60%;
 }
