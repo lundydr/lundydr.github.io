@@ -2,47 +2,87 @@
 <html> 
 
 <head>
-	<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
-	<title>My Blog</title>
+<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+<title>Danny's DBC Diary</title>
 </head>
+
 <body>
 
-<div id = "header">
-<div id = "navigationBar">
-<ul>
-  <li><a href = "../index.html">Home</a></li>
-  <li><a href = "index.html">Blog</a></li>
-  <li><a href = "../projects.html">Projects</a></li>
-  <li><a href = "../resources.html">Resources</a></li>
-</ul>
-</div>
-<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
-<div id="name">Danny's DBC Diary</div>
-</div>
+<header>
+Daniel R. Lundy
+</header>
+
+<div ID="content">
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href = "projects.html">Projects</a></li>
+        <li><a href = "resources.html">Resources</a></li>
+      </ul>
+  </nav>
 
 
-<div id = "content">
+<article>
 <h1>Phase 0, Week 6</h1>
 <h2>Object-Oriented vs Functional Programming</h2>
 <h4>February 1, 2015</h4>
 
-<section>
-Hello again, reader(s)!  Today marks the end of Unit 2 of Phase 0.  This week the cirriculum was again focused on Ruby.  <a href = "t5-ruby-classes.html">Last week</a>, I mentioned that Ruby was known as an "Object-Oriented" programming language and briefly discussed what that meant.  This week, I am going to go more in depth on Object-Oriented Programming (OOP), and compare it with what some consider its opposite, Functional Programming (FP).
+<p>Hello again, reader(s)!  Today marks the end of Unit 2 of Phase 0.  This week the cirriculum was again focused on Ruby.  <a href = "t5-ruby-classes.html">Last week</a>, I mentioned that Ruby was known as an "Object-Oriented" programming language and briefly discussed what that meant.  This week, I am going to go more in depth on Object-Oriented Programming (OOP), and compare it with what some consider its opposite, Functional Programming (FP).</p>
 
-In OOP, the focus of the code is on creating new objects and the methods they respond to.  We send an object a "message" telling it to perform a certain method and give us the result. An object's data is coupled tightly to the object, and therefore, its associated methods.  Typically, the data structure is hidden to the end-user behind the methods used by the object to interface with that data.  In Object-Oriented code, it is easy to implement changes to methods and data relationships without breaking unintended code, since the methods are independent of each other.  However, it is a bit more difficult to implement new functionality to OO code than it is with FP code.
+<p>In OOP, the focus of the code is on creating new objects and the methods they respond to.  We send an object a "message" telling it to perform a certain method and give us the result. An object's data is coupled tightly to the object, and therefore, its associated methods.  Typically, the data structure is hidden to the end-user behind the methods used by the object to interface with that data.  In Object-Oriented code, it is easy to implement changes to methods and data relationships without breaking unintended code, since the methods are independent of each other.  However, it is a bit more difficult to implement new functionality to OO code than it is with FP code.</p>
 
-In FP, the focus is on writing functions to perform operations on the data.  New operations are easy to implement, as they are just written as needed.  The function is only loosely coupled to the data it performs an operation on, so changes to the data structure are likely to break many functions accessing the structure.  
+<p>In FP, the focus is on writing functions to perform operations on the data.  New operations are easy to implement, as they are just written as needed.  The function is only loosely coupled to the data it performs an operation on, so changes to the data structure are likely to break many functions accessing the structure.</p>  
 
-Essentially, the difference in the two is their strengths and weaknesses.  Correct implementation of either style of code requires understanding the types of operations being performed, as well as those that may need to be performed in the future.  Most business database code is FP, writing different functions to change the way something is displayed or change values in a database.  OOP is much better when you anticipate having to change individual steps of your algorithm and want to be more flexible with the data structure.
-</section>
+<p>Essentially, the difference in the two is their strengths and weaknesses.  Correct implementation of either style of code requires understanding the types of operations being performed, as well as those that may need to be performed in the future.  Most business database code is FP, writing different functions to change the way something is displayed or change values in a database.  OOP is much better when you anticipate having to change individual steps of your algorithm and want to be more flexible with the data structure.</p>
+</article>
+
+<aside>
+	<p>Danny's DBC Diary</p>
+	<ul>
+		<li>2015</li>
+			<ul>
+				<li>February</li>
+					<ul>
+						<li>February 22 - Professional</li>
+						<li>February 22 - Cultural</li>
+						<li><a href="t8-tech.html">February 15 - Technical</a></li>
+						<li><a href="c8-conflict.html">February 15 - Cultural</a></li>
+						<li><a href="t7-JavaScript.html">February 18 - Technical</a></li>
+						<li><a href="c7-values.html">February 18 - Cultural</a></li>
+						<li><a href="t6-oop-concepts.html">February 1 - Technical</a></li>
+						<li><a href="c6-stereotype-threat.html">February 1 - Cultural</a></li>				
+					</ul>
+				<li>January</li>
+					<ul>
+						<li><a href="t5-ruby-classes.html">January 25 - Technical</a></li>
+						<li><a href="c5-feedback.html">January 25 - Cultural</a></li>
+						<li><a href="t4-enumerable-methods.html">January 18 - Technical</a></li>
+						<li><a href="c4-tech-issues.html">January 18 - Cultrual</a></li>
+						<li><a href="t3-arrays-hashes.html">January 11 - Technical</a></li>
+						<li><a href="c3-thinking-style.html">January 11 - Cultural</a></li>
+						<li><a href="t2-css-design.html">January 4 - Technical</a></li>
+					</ul>
+			</ul>
+		<li>2014</li>
+			<ul>
+				<li>December</li>
+					<ul>
+						<li><a href="t1-git-blog.html">December 14 - Technical</a></li>
+						<li><a href="c1-chefs-kitchen.html">December 14 -Cultural</a></li>
+					</ul>
+
+			</ul>
+	</ul>
+</aside>
 
 </div>
 
-<div id = "footer"></div>  
-  
-</body>
+<footer>
+	&copy; 2015 Daniel R. Lundy
+</footer>
 
+</body>
 
 </html>

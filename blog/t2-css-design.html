@@ -2,63 +2,100 @@
 <html> 
 
 <head>
-<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
 <link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
 <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
-<title>My Blog</title>
-	</head>
+<title>Danny's DBC Diary</title>
+</head>
+
 <body>
 
-<div id = "header">
-<div id = "navigationBar">
-<ul>
-  <li><a href = "../index.html">Home</a></li>
-  <li><a href = "index.html">Blog</a></li>
-  <li><a href = "../projects.html">Projects</a></li>
-  <li><a href = "../resources.html">Resources</a></li>
-</ul>
-</div>
-<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
-<div id="name">Danny's DBC Diary</div>
-</div>
+<header>
+Daniel R. Lundy
+</header>
 
-
-<div id = "content">
+<div ID="content">
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href = "projects.html">Projects</a></li>
+        <li><a href = "resources.html">Resources</a></li>
+      </ul>
+  </nav>
+<article>
 <h1>Phase 0, Week 2</h1>
 <h2>Fun with CSS</h2>
 <h4>January 4, 2015</h4>
+<p>This "week" at DBC has been a rather long one!  With the holiday break, it's actually been three weeks since my last post, sheesh.  This part of Unit 1 was focused on CSS and HTML.  HTML stands for HyperText Markup Language, and is the language the structure of a website is written in.  CSS, or Cascading Style Sheets, is another langauge used in conjunction with HTML to make your websites beautiful, and not something off circa 1995 Geocities.</p>
 
-<section>
-This "week" at DBC has been a rather long one!  With the holiday break, it's actually been three weeks since my last post, sheesh.  This part of Unit 1 was focused on CSS and HTML.  HTML stands for HyperText Markup Language, and is the language the structure of a website is written in.  CSS, or Cascading Style Sheets, is another langauge used in conjunction with HTML to make your websites beautiful, and not something off circa 1995 Geocities.
+<p>In HTML, sections of the website are divided into different tags, or selectors.  For example, one selector could be the navigation bar for the site.  In CSS, you can selectively target any selector, and apply whatever style (font size, color, emphasis, background color, you name it!) you want to it.  When you've got several sections of a site you'd like to have the same style, you can use what is called a "class" to apply one style to all elements of that class.  For example:</p>
 
-In HTML, sections of the website are divided into different tags, or selectors.  For example, one selector could be the navigation bar for the site.  In CSS, you can selectively target any selector, and apply whatever style (font size, color, emphasis, background color, you name it!) you want to it.  When you've got several sections of a site you'd like to have the same style, you can use what is called a "class" to apply one style to all elements of that class.  For example:
-
-We can define a class for list items like so:
+<p>We can define a class for list items like so:</p>
 <pre class = "codeblock">
 	&lt;li class="list"&gt; &lt;/li&gt;
 </pre>
-we can then apply the class to any other items we want to have the same kind of style the same way.  In CSS you would then use:
+<p>we can then apply the class to any other items we want to have the same kind of style the same way.  In CSS you would then use:</p>
 <pre class = "codeblock">
 	.list {
 	-whatever CSS you want
 	}
 </pre>
-That's great if we have a bunch of things we want to look the same, but what if we've got distinct elements we want to look different?  This is where IDs come into play.  IDs work exactly like a class except you replace the word class with ID:
+<p>That's great if we have a bunch of things we want to look the same, but what if we've got distinct elements we want to look different?  This is where IDs come into play.  IDs work exactly like a class except you replace the word class with ID:</p>
 <pre class = "codeblock">
 	&lt;li id="first"&gt; &lt;/li&gt;
 </pre>
-This defines the ID "first."  In CSS, we would style it like so:
+<p>This defines the ID "first."  In CSS, we would style it like so:</p>
 <pre class = "codeblock">
 	#first {
 	-CSS here
 	}
 </pre>
-Get all that?  The take home message is that classes are for a style you reuse often, and IDs are for individual blocks you want to style separately from the main site.
+<p>Get all that?  The take home message is that classes are for a style you reuse often, and IDs are for individual blocks you want to style separately from the main site.</p>
 
-</section>
+</article>
+<aside>
+	<p>Danny's DBC Diary</p>
+	<ul>
+		<li>2015</li>
+			<ul>
+				<li>February</li>
+					<ul>
+						<li>February 22 - Professional</li>
+						<li>February 22 - Cultural</li>
+						<li><a href="t8-tech.html">February 15 - Technical</a></li>
+						<li><a href="c8-conflict.html">February 15 - Cultural</a></li>
+						<li><a href="t7-JavaScript.html">February 18 - Technical</a></li>
+						<li><a href="c7-values.html">February 18 - Cultural</a></li>
+						<li><a href="t6-oop-concepts.html">February 1 - Technical</a></li>
+						<li><a href="c6-stereotype-threat.html">February 1 - Cultural</a></li>				
+					</ul>
+				<li>January</li>
+					<ul>
+						<li><a href="t5-ruby-classes.html">January 25 - Technical</a></li>
+						<li><a href="c5-feedback.html">January 25 - Cultural</a></li>
+						<li><a href="t4-enumerable-methods.html">January 18 - Technical</a></li>
+						<li><a href="c4-tech-issues.html">January 18 - Cultrual</a></li>
+						<li><a href="t3-arrays-hashes.html">January 11 - Technical</a></li>
+						<li><a href="c3-thinking-style.html">January 11 - Cultural</a></li>
+						<li>January 4 - Technical</a></li>
+					</ul>
+			</ul>
+		<li>2014</li>
+			<ul>
+				<li>December</li>
+					<ul>
+						<li><a href="t1-git-blog.html">December 14 - Technical</a></li>
+						<li><a href="c1-chefs-kitchen.html">December 14 -Cultural</a></li>
+					</ul>
+
+			</ul>
+	</ul>
+</aside>
 </div>
 
-<div id = "footer"></div>  
+<footer>
+  &copy; 2015 Daniel R. Lundy
+</footer>
   
 </body>
 

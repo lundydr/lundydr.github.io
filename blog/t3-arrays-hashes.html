@@ -2,49 +2,51 @@
 <html> 
 
 <head>
-	<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
-	<title>My Blog</title>
+<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+<title>Danny's DBC Diary</title>
 </head>
+
 <body>
 
-<div id = "header">
-<div id = "navigationBar">
-<ul>
-  <li><a href = "../index.html">Home</a></li>
-  <li><a href = "index.html">Blog</a></li>
-  <li><a href = "../projects.html">Projects</a></li>
-  <li><a href = "../resources.html">Resources</a></li>
-</ul>
-</div>
-<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
-<div id="name">Danny's DBC Diary</div>
-</div>
+<header>
+Daniel R. Lundy
+</header>
+
+<div ID="content">
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href = "projects.html">Projects</a></li>
+        <li><a href = "resources.html">Resources</a></li>
+      </ul>
+  </nav>
 
 
-<div id = "content">
+
+<article>
 <h1>Phase 0, Week 3</h1>
 <h2>Ruby: Arrays vs Hashes</h2>
 <h4>January 11, 2015</h4>
 
-<section>
-Hello again reader(s)!  Today marks the final day of Phase 0, Week 3, which is also the end of the first Unit!  33% to Phase 1, Hooray!  This week, the cirriculum was focused on the programming language Ruby.  Ruby is a newer language popular among today's web developers.  Like most modern languages, Ruby allows programmers to store collections of data in a single place.  There are two types of "collections" Ruby allows you to use, <i>Arrays</i> and <i>Hashes</i>.  The main difference between the two is the method of indexing the object.  Indexing is how you keep track of the individual elements in the array or hash.  Arrays can only use integers and indeces.  In the following example, we see an array defined and how to access its contents.
+<p>
+Hello again reader(s)!  Today marks the final day of Phase 0, Week 3, which is also the end of the first Unit!  33% to Phase 1, Hooray!  This week, the cirriculum was focused on the programming language Ruby.  Ruby is a newer language popular among today's web developers.  Like most modern languages, Ruby allows programmers to store collections of data in a single place.  There are two types of "collections" Ruby allows you to use, <i>Arrays</i> and <i>Hashes</i>.  The main difference between the two is the method of indexing the object.  Indexing is how you keep track of the individual elements in the array or hash.  Arrays can only use integers and indeces.  In the following example, we see an array defined and how to access its contents.</p>
 <pre class = "codeblock">
 	array = [a, b ,c]
 	array[1] = b
 </pre>
-Woah, wait.  The first element is b?  That's not what you'd expect with normal indexing.  However, most programming languages begin at 0.  Therefore, the 0th element is a.  The elements a, b, and c could be any object type: string, integer, or float.
+<p>Woah, wait.  The first element is b?  That's not what you'd expect with normal indexing.  However, most programming languages begin at 0.  Therefore, the 0th element is a.  The elements a, b, and c could be any object type: string, integer, or float.</p>
 
-Hashes, however, can accept any object type as an index.  This means we could use a string, an integer, a float, or whatever we wanted.  Because anthing can be used, the method for creating a hash is a bit more complicated:
+<p>Hashes, however, can accept any object type as an index.  This means we could use a string, an integer, a float, or whatever we wanted.  Because anthing can be used, the method for creating a hash is a bit more complicated:</p>
 <pre class="codeblock">
 	hash = {
 	index => element
 	}	
 </pre>
-As you can see, each element of the hash must be assigned its own index, or key.  You can use the same key for multiple elements if you desire.  The elements can again be any object type.
+<p>As you can see, each element of the hash must be assigned its own index, or key.  You can use the same key for multiple elements if you desire.  The elements can again be any object type.</p>
 
-Well that's great, but they seem pretty similar.  Why would I want to ever use that clunky hash instead of an array?  Let's say we wanted to assign different animals to their corresponding kingdom.  Let's say we have about 100 animals, and we want to sort them into their six kingdoms.  You'd need six separate arrays to do this, one for each kingdom, because we can only keep track of our elements with integers.  (You could also use an array of arrays with the second element in the inner array for the kingdom, and the index of the outer array corresponding to the animal, but you would end up repeating yourself A LOT). Using a hash, however would allow us to store an extra dimension of information like this:
+<p>Well that's great, but they seem pretty similar.  Why would I want to ever use that clunky hash instead of an array?  Let's say we wanted to assign different animals to their corresponding kingdom.  Let's say we have about 100 animals, and we want to sort them into their six kingdoms.  You'd need six separate arrays to do this, one for each kingdom, because we can only keep track of our elements with integers.  (You could also use an array of arrays with the second element in the inner array for the kingdom, and the index of the outer array corresponding to the animal, but you would end up repeating yourself A LOT). Using a hash, however would allow us to store an extra dimension of information like this:</p>
 <pre class="codeblock">
 	animals = {
 	"bacteria" => "E. coli"
@@ -55,13 +57,53 @@ Well that's great, but they seem pretty similar.  Why would I want to ever use t
 	etc.
 	}
 </pre>
-That's a lot more efficient code, isn't it?  That's exactly what we want to do as developers, the absolute minimum amount of code to get the job done right.  I like to call it being proactively lazy.
-</section>
+<p>That's a lot more efficient code, isn't it?  That's exactly what we want to do as developers, the absolute minimum amount of code to get the job done right.  I like to call it being proactively lazy.</p>
+</article>
+<aside>
+	<p>Danny's DBC Diary</p>
+	<ul>
+		<li>2015</li>
+			<ul>
+				<li>February</li>
+					<ul>
+						<li>February 22 - Professional</li>
+						<li>February 22 - Cultural</li>
+						<li><a href="t8-tech.html">February 15 - Technical</a></li>
+						<li><a href="c8-conflict.html">February 15 - Cultural</a></li>
+						<li><a href="t7-JavaScript.html">February 18 - Technical</a></li>
+						<li><a href="c7-values.html">February 18 - Cultural</a></li>
+						<li><a href="t6-oop-concepts.html">February 1 - Technical</a></li>
+						<li><a href="c6-stereotype-threat.html">February 1 - Cultural</a></li>				
+					</ul>
+				<li>January</li>
+					<ul>
+						<li><a href="t5-ruby-classes.html">January 25 - Technical</a></li>
+						<li><a href="c5-feedback.html">January 25 - Cultural</a></li>
+						<li><a href="t4-enumerable-methods.html">January 18 - Technical</a></li>
+						<li><a href="c4-tech-issues.html">January 18 - Cultrual</a></li>
+						<li>January 11 - Technical</a></li>
+						<li><a href="c3-thinking-style.html">January 11 - Cultural</a></li>
+						<li><a href="t2-css-design.html">January 4 - Technical</a></li>
+					</ul>
+			</ul>
+		<li>2014</li>
+			<ul>
+				<li>December</li>
+					<ul>
+						<li><a href="t1-git-blog.html">December 14 - Technical</a></li>
+						<li><a href="c1-chefs-kitchen.html">December 14 -Cultural</a></li>
+					</ul>
+
+			</ul>
+	</ul>
+</aside>
+
 </div>
 
-<div id = "footer"></div>  
-  
-</body>
+<footer>
+	&copy; 2015 Daniel R. Lundy
+</footer>
 
+</body>
 
 </html>

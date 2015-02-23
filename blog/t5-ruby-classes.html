@@ -2,36 +2,34 @@
 <html> 
 
 <head>
-	<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-	<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
-	<title>My Blog</title>
+<link rel="shortcut icon" href="../stylesheets/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+<link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+<title>Danny's DBC Diary</title>
 </head>
+
 <body>
 
-<div id = "header">
-<div id = "navigationBar">
-<ul>
-  <li><a href = "../index.html">Home</a></li>
-  <li><a href = "index.html">Blog</a></li>
-  <li><a href = "../projects.html">Projects</a></li>
-  <li><a href = "../resources.html">Resources</a></li>
-</ul>
-</div>
-<div id="pic"><img src="me.jpg" alt="Me!"/>  </div>
-<div id="name">Danny's DBC Diary</div>
-</div>
+<header>
+Daniel R. Lundy
+</header>
 
-
-<div id = "content">
+<div ID="content">
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href = "projects.html">Projects</a></li>
+        <li><a href = "resources.html">Resources</a></li>
+      </ul>
+  </nav>
+<article>
 <h1>Phase 0, Week 5</h1>
 <h2>Classes in Ruby</h2>
 <h4>January 25, 2015</h4>
 
-<section>
-Another week has gone by, and now I am officially over the Phase 0 hump - more than halfway done!  Once again, this week's cirriculum focused on the Ruby language.  Ruby is known as an "Object Oriented" language, or, in layman's terms, one where we perform our actions on "objects."  As noted before, an object can be just about anything, and Ruby has lots of default object classes (Array, Hash, etc) built in.  There's also just a default object if you are boring.  But what if I want to make my own type of object that has its own set of methods I can use with it?  Well, Ruby has you covered, and you can define your own classes!
+<p>Another week has gone by, and now I am officially over the Phase 0 hump - more than halfway done!  Once again, this week's cirriculum focused on the Ruby language.  Ruby is known as an "Object Oriented" language, or, in layman's terms, one where we perform our actions on "objects."  As noted before, an object can be just about anything, and Ruby has lots of default object classes (Array, Hash, etc) built in.  There's also just a default object if you are boring.  But what if I want to make my own type of object that has its own set of methods I can use with it?  Well, Ruby has you covered, and you can define your own classes!</p>
 
-Let's say we wanted to define a Class "Dog."  What sorts of attributes to dogs tend to have?  What would we want to include in our class?  What kind of methods, or actions, would we want to do with a dog?  We might want to know the dog's name, gender, age, and breed as a basic set of identifiers.  In Ruby, we need to define a method "initialize" for each class that tells the computer how to handle the CLass.new call.  Note that the name of the class, Dog, is capitalized, because it is a constant.
+<p>Let's say we wanted to define a Class "Dog."  What sorts of attributes to dogs tend to have?  What would we want to include in our class?  What kind of methods, or actions, would we want to do with a dog?  We might want to know the dog's name, gender, age, and breed as a basic set of identifiers.  In Ruby, we need to define a method "initialize" for each class that tells the computer how to handle the CLass.new call.  Note that the name of the class, Dog, is capitalized, because it is a constant.</p>
 <pre class = "codeblock">
 	> class Dog
 	>	def initialize(name,gender,age,breed)
@@ -42,9 +40,9 @@ Let's say we wanted to define a Class "Dog."  What sorts of attributes to dogs t
 	>	end
 	> end
 </pre>
-Notice how all the variable declarations in the method have an @ before them?  This specifies them as "instance variables," which makes them available to the entire class rather than just the normal scope of the method they are defined in.  To create a new instance of the dog class we would type something like dog = Dog.new("Spaghetti","male",6,"mixed"). 
+<p>Notice how all the variable declarations in the method have an @ before them?  This specifies them as "instance variables," which makes them available to the entire class rather than just the normal scope of the method they are defined in.  To create a new instance of the dog class we would type something like dog = Dog.new("Spaghetti","male",6,"mixed"). </p>
 
-Okay, great, now we know some basic information about this dog, but what if we want to interact with it?  We can just keep defining methods inside the class definition, and these methods will then be exclusively available to the class they are included with.  Let's say we want to add two methods: feeding the dog, and petting the dog.  We'll make them simple methods that just print something to the console in this case, but you could do anything you like in these methods. So after the end of the initialize block, we add:
+<p>Okay, great, now we know some basic information about this dog, but what if we want to interact with it?  We can just keep defining methods inside the class definition, and these methods will then be exclusively available to the class they are included with.  Let's say we want to add two methods: feeding the dog, and petting the dog.  We'll make them simple methods that just print something to the console in this case, but you could do anything you like in these methods. So after the end of the initialize block, we add:</p>
 <pre class = "codeblock">
 	>	def walk
 	>		puts "You take #{@name} for a nice walk around the block.  #{@name} is very happy!" 
@@ -52,16 +50,56 @@ Okay, great, now we know some basic information about this dog, but what if we w
 	>	def feed
 	>		puts "You pour some food into #{@name}\'s bowl, but he doesn\'t really care."
 </pre>
-This code goes before the end of the class definition, in case that wasn't clear.  I used a few tricks in these strings, namely inline insertion of an instance variable and escaping.  When you use #{variable} inside of a string, it inserts the value of the substring variable directly into the string!  Much easier than adding the strings together manually.  The backslash (\) before the single quotes is an escape character, basically telling ruby I actually want to put a single quote there, not end my string.
+<p>This code goes before the end of the class definition, in case that wasn't clear.  I used a few tricks in these strings, namely inline insertion of an instance variable and escaping.  When you use #{variable} inside of a string, it inserts the value of the substring variable directly into the string!  Much easier than adding the strings together manually.  The backslash (\) before the single quotes is an escape character, basically telling ruby I actually want to put a single quote there, not end my string.</p>
 
-As you can see, Classes can be very handy if you have an object type you will be using over and over in your code.
-</section>
+<p>As you can see, Classes can be very handy if you have an object type you will be using over and over in your code.</p>
+</article>
+
+<aside>
+	<p>Danny's DBC Diary</p>
+	<ul>
+		<li>2015</li>
+			<ul>
+				<li>February</li>
+					<ul>
+						<li>February 22 - Professional</li>
+						<li>February 22 - Cultural</li>
+						<li><a href="t8-tech.html">February 15 - Technical</a></li>
+						<li><a href="c8-conflict.html">February 15 - Cultural</a></li>
+						<li><a href="t7-JavaScript.html">February 18 - Technical</a></li>
+						<li><a href="c7-values.html">February 18 - Cultural</a></li>
+						<li><a href="t6-oop-concepts.html">February 1 - Technical</a></li>
+						<li><a href="c6-stereotype-threat.html">February 1 - Cultural</a></li>				
+					</ul>
+				<li>January</li>
+					<ul>
+						<li>January 25 - Technical</a></li>
+						<li><a href="c5-feedback.html">January 25 - Cultural</a></li>
+						<li><a href="t4-enumerable-methods.html">January 18 - Technical</a></li>
+						<li><a href="c4-tech-issues.html">January 18 - Cultrual</a></li>
+						<li><a href="t3-arrays-hashes.html">January 11 - Technical</a></li>
+						<li><a href="c3-thinking-style.html">January 11 - Cultural</a></li>
+						<li><a href="t2-css-design.html">January 4 - Technical</a></li>
+					</ul>
+			</ul>
+		<li>2014</li>
+			<ul>
+				<li>December</li>
+					<ul>
+						<li><a href="t1-git-blog.html">December 14 - Technical</a></li>
+						<li><a href="c1-chefs-kitchen.html">December 14 -Cultural</a></li>
+					</ul>
+
+			</ul>
+	</ul>
+</aside>
 
 </div>
 
-<div id = "footer"></div>  
-  
-</body>
+<footer>
+	&copy; 2015 Daniel R. Lundy
+</footer>
 
+</body>
 
 </html>
